@@ -6,6 +6,7 @@ const Inputbox = ({
     amount,
     onAmountChange,
     onCurrencyChange,
+    // listed all the currencies in the api.
     currencyoptions = [
   'USD', 'EUR', 'GBP', 'JPY', 'AUD', 
   'CAD', 'CHF', 'CNY', 'SEK', 'NZD', 
@@ -19,7 +20,7 @@ const Inputbox = ({
     const [useselectedCurrecy, setuseselectedCurrency] = useState(selectedCurrecy);
 
   return (
-    
+  
 
     <div className='w-11/12  h-28 bg-white my-4 p-2 mx-6'>
     <label htmlFor="from">{label}</label>
