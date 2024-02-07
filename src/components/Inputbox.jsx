@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from 'react';
+import React  from 'react'
+import { useState, useId } from 'react';
 
 const Inputbox = ({
     label,
@@ -18,15 +18,17 @@ const Inputbox = ({
 }) => {
 
     const [useselectedCurrecy, setuseselectedCurrency] = useState(selectedCurrecy);
+    const id = useId();
 
   return (
   
 
     <div className='w-11/12  h-28 bg-white my-4 p-2 mx-6'>
-    <label htmlFor="from">{label}</label>
+    <label htmlFor={id}>{label}</label>
     <br />
     <input 
     type="text"  
+    id={id}
     className='h-8 my-2 w-full '
     value={amount} 
     onChange={(e)=>{
